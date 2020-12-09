@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    a {
+        margin-bottom: 1%;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Northwind Veri Tabanı ile LINQ Örnekleri</h1>
+    <p>Daha fazlası için <a target="_blank" href="https://cagrierhan.com">Tıklayın</a></p>
+</div>
+
+<a href="@Url.Action("CustomerCountPerCountry", "Home")" class="btn btn-primary">(GROUP BY) Ülkelere Göre Müşteri Sayıları</a>
+<br />
+<a href="@Url.Action("MostExpensiveProductsPerCategory", "Home")" class="btn btn-primary disabled">(GROUP BY) MostExpensiveProductsPerCategory</a>
+<br />
+<a href="@Url.Action("AggregateFunction", "Home")" class="btn btn-primary">Sum aggregate fonksiyonu ile her siparişin toplam tutarını getirme</a>
+<br />
+<a href="@Url.Action("GroupJoin", "Home")" class="btn btn-primary">(GROUP JOIN) Sipariş ve Detayları</a>
