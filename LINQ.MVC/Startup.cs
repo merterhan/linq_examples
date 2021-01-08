@@ -36,11 +36,13 @@ namespace LINQ.MVC
             {
                 options.JsonSerializerOptions.WriteIndented = _environment.IsDevelopment();
                 //options.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.);
-            }).AddNewtonsoftJson(options =>
+            })
+                .AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             }
-); ;
+)
+                ; ;
 
         }
 
